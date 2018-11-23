@@ -1,0 +1,97 @@
+[{
+    "name": "User",
+    "attrs": {
+        "id": {
+            "type": "Long",
+            "nullable": false
+        },
+        "is_bot": {
+            "type": "Boolean",
+            "nullable": false
+        },
+        "first_name": {
+            "type": "String",
+            "nullable": false
+        },
+        "last_name": {
+            "type": "String",
+            "nullable": false
+        },
+        "username": {
+            "type": "String",
+            "nullable": true
+        },
+        "language_code": {
+            "type": "String",
+            "nullable": true
+        }
+    }
+}, {
+    "name": "Chat",
+    "attrs": {
+        "id": {
+            "type": "Long",
+            "nullable": false
+        },
+        "type": {
+            "type": "String",
+            "nullable": false
+        },
+        "title": {
+            "type": "String",
+            "nullable": true
+        },
+        "username": {
+            "type": "String",
+            "nullable": true
+        },
+        "first_name": {
+            "type": "String",
+            "nullable": true
+        },
+        "last_name": {
+            "type": "String",
+            "nullable": true
+        },
+        "all_members_are_administrators": {
+            "type": "Boolean",
+            "nullable": true
+        },
+        "photo": {
+            "type": "ChatPhoto",
+            "nullable": true
+        },
+        "description": {
+            "type": "String",
+            "nullable": true
+        },
+        "invite_link": {
+            "type": "String",
+            "nullable": true
+        },
+        "pinned_message": {
+            "type": "Message",
+            "nullable": true
+        },
+        "sticker_set_name": {
+            "type": "String",
+            "nullable": true
+        },
+        "can_set_sticker_set": {
+            "type": "Boolean",
+            "nullable": true
+        }
+    }
+}, {
+    "name": "Message",
+    "attrs": {
+        "message_id": {
+            "type": "String",
+            "nullable": false
+        },
+        "from": {
+            "type": "User",
+            "nullable": true
+        }
+    }
+}]
